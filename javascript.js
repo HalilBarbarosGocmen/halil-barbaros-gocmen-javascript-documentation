@@ -39,7 +39,7 @@
 //? console.log(3%2); // Mod Alma
 //? console.log(3**2); // Üs Alma
 
-//! Bir Web Sayfasında JavaScript Kodları Nasıl Oluşturulur !
+//! Bir Web Sayfasında JavaScript Kodları Nasıl Oluşturulur ?
 
 // Satır içi oluşturma.
 // Dahili oluşturma.
@@ -69,7 +69,7 @@
 
 // Harici oluşturma ile aynı mantığa sahiptir sadece birden fazla js dosyası ekleyebiliriz.
 
-//! Veri Türleri Nedir Ve Nelerdir !
+//! Veri Türleri Nedir Ve Ne İşe Yarar !
 
 // JavaScript'te ve diğer programlama dillerinde farklı tiplerde veri türleri vardır. JavaScript ilkel veri tipleri şunlardır : String (Metin) - Number (Sayı) - Boolean (True-False) - Undefined (Tanımsız) - Null (Boş) ve Symbol (Sembol).
 
@@ -119,7 +119,7 @@
 //? console.log(typeof null); // Object Type
 //? console.log(typeof undefined); // Undefined
 
-//! Değişkenler Nedir Ve Nasıl Kullanılır !
+//! Değişkenler Nedir Ve Nasıl Kullanılır ?
 
 // Değişkenlere veri kapsayıcılar diyebiliriz. Unutmayınıx ki değişkenler, verileri belleklerde (ram) saklar. Bir değişken atandığında belleklerde kendisi için yer ayrılır. Bir değişkene bir değer (veri) atandığında, bellek alanı bu verilerle doldurulur. Değişken tanımlamak için var, let veya const keywords'lerini kullanırız.
 
@@ -148,7 +148,7 @@
 //? konum = "İstanbul";
 //? console.log(isim, is, konum); = BarbarosGöçmen Yazılımcı İstanbul
 
-//! Template Literals Nedir Ve Nasıl Kullanılır !
+//! Template Literals Nedir Ve Nasıl Kullanılır ?
 
 // Template Literals değişken tanımlama ve değer atama işlemlerinde daha özgür ve kolaylaştırılmış bir şekilde kodlama yapabilmemizi sağlayan yazım biçimidir. Normal tırnak işaretleri yerine backtick tırnak ve değerler ise ${} işareti ile kullanılır.
 
