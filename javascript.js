@@ -195,4 +195,4 @@
 //?    console.log('Someone else should drive...')
 //? }
 
-//Yukarıdaki örnekte ehliyetimizin olması gerektiğini, iyi bir görüşümüzün olması gerektiğini ve yorgun olmamamız gerektiğini görüyoruz. Bu değerleri sağladığımız içinde arabayı kullanabileceğimizin çıktısını alıyoruz.
+// Yukarıdaki örnekte ehliyetimizin olması gerektiğini, iyi bir görüşümüzün olması gerektiğini ve yorgun olmamamız gerektiğini görüyoruz. Bu değerleri sağladığımız içinde arabayı kullanabileceğimizin çıktısını alıyoruz.
