@@ -182,7 +182,7 @@
 // Karşılaştırma operatörlerini 2 farklı şekilde kullanırız bunlar '==' ve '===' 'dir. '==' olarak kullandığımız karşılaştırma operatörü sadece içeriğe bakar ve türün aynı olup olmadığını kontrol etmez. '===' karşılaştırma operatörü ise hem içeriği hem de türü kontrol eder.
 
 
-//! Ve, Veya, Değilse Kullanımı Nedir Ve Nasıl Yapılır ?
+//! Ve, Veya, Değilse Kullanımı Nedir Ve Nasıl Yapılır (Mantıksal Operator) ?
 
 // JavaScript'te '&&' işareti 've' anlamına gelir ve sunulan 2 seçenekte true değere sahip olmalıdır.
 // JavaScript'te '||' işareti 'veya' anlamına gelir ve sunulan seçeneklerden en az biri true değere sahip olmalıdır.
@@ -270,4 +270,39 @@
 
 //? logger();
 
-// Yukarıda ki örnekte logger adında bir fonksiyon oluşturduk ve süslü parantezlerin içerisine çalıştırmasını istediğimiz kod satırını girdik. Alt satırda oluşturduğumuz fonksiyonun adını ve parantezi yazarsak yani 'logger();' yazar isek oluşturduğumu fonsiyonu tekrar tekrar her yazışımızda çağırabilir-çalıştırabiliriz ve böylece her çağırdığımzıda oluşturduğumuz fonksiyonun içerisindeki kod çalışacaktır.
+// Yukarıda ki örnekte logger adında bir fonksiyon oluşturduk ve süslü parantezlerin içerisine çalıştırmasını istediğimiz kod satırını girdik. Alt satırda oluşturduğumuz fonksiyonun adını ve parantezi yazarsak yani 'logger();' yazar isek oluşturduğumu fonsiyonu tekrar tekrar her yazışımızda çağırabilir-çalıştırabiliriz ve böylece her çağırdığımızda oluşturduğumuz fonksiyonun içerisindeki kod çalışacaktır.
+// Yukarıda ki fonksiyonun sonucunu herhangi bir değere kaydetmiyoruz, return kullanmıyoruz. Sadece tanımsız değer üretiliyor ve anlık olarak sadece bunu yakalıyoruz.
+
+//? function fruitProcessor(apples,oranges) {
+//?    const juice = `Juice with ${apples} apples and ${orages} oranges.`;
+//?    return juice;
+//? }
+
+//? const appleJuice = fruitProcessor(5, 0);
+//? console.log(appleJuice);
+
+//? const appleOrangeJuice = fruitProcessor(2, 4);
+//? console.log(appleOrangeJuice)
+
+// Yukarıdaki örnekte fruitProcessor adında bir fonksiyon oluşturup içerisine 'apples, oranges' adında 2 farklı parametre giriyoruz. Sonrasında fonksiyonumuzun içerisine juice adında bir değişken tanımlayıp template literals kullanarak içerisinde yazmasını istediğimiz şeyleri yazarak tanımlıyoruz ve return juice diyerek değişkenimizi döndürüyoruz. Alt satırlarde ise yeni bir değişken oluşturup içerisine ilk baştaki fonksiyonumuzun adını yazıyoruz ve parantezlerin içine ise o fonksiyonlardaki parametrelerin hangi değerlere sahip olmasını istiyorsak onları argüman olark yazıyoruz ve böylelikle hem fonksiyonumuzu çalıştırıyor hemde içerisinde döndireceğimiz değeri de kaydediyor-yakalıyor-tutuyor ve altında console.log ile gösteriyoruz.
+
+//! JavaScript'te 2 Çeşit Fonksiyon Vardır. Bu Fonskiyonlar Nelerdir Ve Nasıl Kullanılır ?
+
+// JavaScript'te 'Function Declaration' ve 'Function Expression' adında 2 farklı fonskiyon türü vardır.
+
+//? function calcAge1 (birthYear) {
+//?    return 2037 - birthYear;
+//? }
+
+//? const age1 = calcAge1(1991);
+
+// Yukarıda 'Function Declaration' fonksiyon türünün örneği verilmiştir.
+
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const age2 = calcAge2(1991);
+console.log(age1, age2);
+
+// Yukarıda 'Function Expression' adında fonksiyon türü örneği verilmiştir ve sonrasında ise console.log(age1, age2) ile her iki fonksiyonuda konsola yazdırdık.
