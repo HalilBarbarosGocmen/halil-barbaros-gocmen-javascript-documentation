@@ -298,11 +298,13 @@
 
 // Yukarıda 'Function Declaration' fonksiyon türünün örneği verilmiştir.
 
-const calcAge2 = function (birthYear) {
-    return 2037 - birthYear;
-}
+//? const calcAge2 = function (birthYear) {
+//?     return 2037 - birthYear;
+//? }
 
-const age2 = calcAge2(1991);
-console.log(age1, age2);
+//? const age2 = calcAge2(1991);
+//? console.log(age1, age2);
 
 // Yukarıda 'Function Expression' adında fonksiyon türü örneği verilmiştir ve sonrasında ise console.log(age1, age2) ile her iki fonksiyonuda konsola yazdırdık.
+
+// Bu iki fonksiyon türünün birbirinden farkı ise şudur; Function Declaration fonksiyon türünde fonskiyonu çağırıp öncesinde tanımlayabiliriz ve 
