@@ -286,9 +286,9 @@
 
 // Yukarıdaki örnekte fruitProcessor adında bir fonksiyon oluşturup içerisine 'apples, oranges' adında 2 farklı parametre giriyoruz. Sonrasında fonksiyonumuzun içerisine juice adında bir değişken tanımlayıp template literals kullanarak içerisinde yazmasını istediğimiz şeyleri yazarak tanımlıyoruz ve return juice diyerek değişkenimizi döndürüyoruz. Alt satırlarde ise yeni bir değişken oluşturup içerisine ilk baştaki fonksiyonumuzun adını yazıyoruz ve parantezlerin içine ise o fonksiyonlardaki parametrelerin hangi değerlere sahip olmasını istiyorsak onları argüman olark yazıyoruz ve böylelikle hem fonksiyonumuzu çalıştırıyor hemde içerisinde döndireceğimiz değeri de kaydediyor-yakalıyor-tutuyor ve altında console.log ile gösteriyoruz.
 
-//! JavaScript'te 2 Çeşit Fonksiyon Vardır. Bu Fonskiyonlar Nelerdir Ve Nasıl Kullanılır ?
+//! JavaScript'te 3 Çeşit Fonksiyon Vardır. Bu Fonskiyonlar Nelerdir Ve Nasıl Kullanılır ?
 
-// JavaScript'te 'Function Declaration' ve 'Function Expression' adında 2 farklı fonskiyon türü vardır.
+// JavaScript'te 'Function Declaration' , 'Function Expression' ve 'Arrow Function' adında 3 farklı fonskiyon türü vardır.
 
 //? function calcAge1 (birthYear) {
 //?    return 2037 - birthYear;
@@ -307,4 +307,81 @@
 
 // Yukarıda 'Function Expression' adında fonksiyon türü örneği verilmiştir ve sonrasında ise console.log(age1, age2) ile her iki fonksiyonuda konsola yazdırdık.
 
-// Bu iki fonksiyon türünün birbirinden farkı ise şudur; Function Declaration fonksiyon türünde fonskiyonu çağırıp öncesinde tanımlayabiliriz ve 
+//? const calcAge3 = birthYear => 2037 - birthYear;
+
+// Yukarıda 'Arrow Function' adında fonksiyon türü örneği verilmiştir.
+
+//? const calcAge = function (birthYear) {
+//?    return 2037 - birthYear;
+//? }
+ 
+//? const yearsUntilRetirement = function (birthYear, firstName) {
+//?    const age = calcAge(birthYear);
+//?    const retirement = 65 - age;
+
+//?    if (retirement > 0) {
+//?        console.log(`${firstName} retires in ${retirement} years`);
+//?        return retirement;
+//?    } else {
+//?        console.log(`${firstName} has already retired.`);
+//?       return -1;
+//?    }
+//? }
+
+//? console.log(yearsUntilRetirement(1991, 'Jonas'));
+//? console.log(yearsUntilRetirement(1950, 'Mike'));
+
+// Yukarıda Function Declaration fonksiyon türü ile fonksiyon içerisinde fonksiyon yazmak ve if else karşılaştırma parametrelerini kullandığımız örnek verilmiştir.
+
+//? const calcAcverage = (a,b,c) => (a + b + c) / 3
+//? console.log(calcAcverage(3, 4, 5));
+
+//? let scoreDolphins = calcAverage(44, 23, 71);
+//? let scoreKoalas = calcAverage(65, 54, 49);
+//? console.log(scoreDolphins, scoreKoalas);
+
+//? const checkWinner = function (avgDolphins, avgKoalas) {
+//?    if (avgDolphins >= 2 * avgKoalas) {
+//?        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+//?    } else if (avgKoalas >= 2 * avgDolphins) {
+//?        console.log(`Koalas win (${avgDolphins} vs. ${avgDolphins})`);
+//?    } else {
+//?        console.log('No team wins...');
+//?    }
+//? }
+
+//? checkWinner(scoreDolphins, scoreKoalas);
+
+//? checkWinner(576, 111);
+
+//? scoreDolphins = calcAcverage(85, 54, 41);
+//? scoreKoalas = calcAcverage(23, 34, 27);
+//? console.log(scoreDolphins, scoreKoalas);
+//? checkWinner(scoreDolphins, scoreKoalas);
+
+// Yukarıda güzel bir fonksiyon örneği verilmiştir. Puan karşılaştırmaları yapılıp sonrasında değerleri değiştirip kazanan 2. kez kontrol edilmektedir.
+
+//! Diziler (Arrays) Nedir Ve Nasıl Kullanılır ?
+
+// Diziler birden fazla değerimizin olduğu ifadeleri kolay bir şekilde tanımlamamızı sağlayan faktördür.
+
+//? const friends = ['Michael', 'Steven', 'Peter'];
+// Yukarıda ki örnekte dizi kullanımı gösterilmiştir.
+
+//? console.log(friends[0]);
+//? console.log(friends[2]);
+// Yukarıdaki örneklerde oluşturduğumuz dizide ki 0. ve 2. index numaralı değerleri konsola yazdırdık. Michael ve Peter.
+
+//? console.log(friends.length);
+//? console.log(friends[friends.length - 1]);
+// Yukarıdaki ilk console.log'da friends dizimizin uzunluğunu yani içerisinde kaç değer olduğunu ekrana yazdırdık. 3.
+// Yukarıdaki ikinci console.log'da friends dizimizin uzunluğunun -1'ini yani son değerini ekrana yazdırdık. Peter.
+
+//? friends[2] = 'Jay'
+//? console.log(friends);
+// Yukarıdaki örnekte friends dizimizin 2. index numaralı değerini 'Jay'değeri ile değiştiriyoruz ve ardından konsola tekrar dizimizi yazdırıyoruz.
+
+//? const firstName = 'Jonas'
+//? const jonas = [firstName, 'Barbaros', 2037 - 1991, 'teacher', friends];
+//? console.log(jonas)
+// Yukarıda ki örnekte dizi içerisinde tanımladığımız firstName değişkenini, diğer değerleri ve daha önce yazmış olduğumuz diziyi ekledik ve konsola yazdırdık.
