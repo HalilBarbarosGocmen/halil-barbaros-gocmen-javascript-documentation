@@ -385,3 +385,177 @@
 //? const jonas = [firstName, 'Barbaros', 2037 - 1991, 'teacher', friends];
 //? console.log(jonas)
 // Yukarıda ki örnekte dizi içerisinde tanımladığımız firstName değişkenini, diğer değerleri ve daha önce yazmış olduğumuz diziyi ekledik ve konsola yazdırdık.
+
+//! Dizi Metotları Nelerdir Ve Nasıl Kullanılır ?
+
+//? const friends = ['Michael','Steven', 'Peter'];
+//? friends.push('Jay');
+//? console.log(friends)
+
+// Yukarıdaki örnekte ilk başta tanımlamış olduğumuz dizinin sonuna Jay adında yeni bir eleman ekledik ve yeni dizimizi konsola yazdırdık.
+
+//? frinds.unshift('John');
+//? console.log(friends);
+
+// Yukarıdaki örnekte oluşturmuş olduğumuz dizinin en başına John adında yeni bir eleman ekledik ve konsola yazdırdık.
+
+//? friends.pop();
+//? console.log(friends);
+
+// Yukarıdaki örnekte oluşturmuş olduğumuz dizinin en sonundaki elemanı sildik ve konsola yeni dizimizi yazdırdık.
+
+//? friends.shift();
+//? console.log(friends);
+
+// Yukarıdaki örnekte oluşturmuş olduğumuz dizinin en başındaki elemanı kaldırdık ve konsola yeni dizimizi yazdırdık.
+
+//? console.log(friends.indexOf('Steven'));
+
+// Yukarıdaki örnekte friends adlı dizimizde steven adlı elemanın kaçıncı index numarasında olduğunu konsola yazdırdık. Eğer dizide olmayan bir elemanın index numarasını bu yöntem ile aramaya çalışırsak konsolda -1 yazacaktır.
+
+//? console.log(friends.includes('Steven'));
+
+// Yukarıdaki örnekte friends adlı dizimizin içerisinde Steven adlı eleman var mı yok mu onu aradık ve konsola yazdırdık, var ise true değerini yok ise false değerini aldık.
+
+//? if (friends.includes('Steven')) {
+//?    console.log('You have a friend called Steven');
+//? }
+
+// Yukarıdaki örnekte includes metotunu kullanarak koşullu ifade örneği görmekteyiz.
+
+//? const calcTip = function (bill) {
+//?    return bill >= 50 && bill <= 300 ? bill * 0.15 
+//?   : bill * 0.2;
+//? }
+
+//? const bills = [125, 555, 44];
+//? const tips = [calctip(bills[0]), calctip(bills[1]), calctip(bills[2])];
+//? const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+//? console.log(bills, tips, totals);
+
+// Yukarıdaki örnekte dizileri ve fonksiyonu kullanarak yapmış olduğumuz örnek görülmektedir.
+
+//! Object (Nesneler) Nedir Ve Nasıl Kullanılır ?
+
+// Objeler, içerisinde birden farklı veri türünü içeren, yazılımcı tarafından oluşturulan daha komplike veri türleridir.
+
+//? const jonas = {
+//?    firstName : 'Jonas',
+//?    lastName: 'Schmedtmann',
+//?    age: 2037 - 1991,
+//?    job: 'teacher',
+//?   friends: ['Michael', 'Peter', 'Steven']
+//? };
+
+//? const jonas = [
+//?    'Jonas',
+//?    'Schmedtmann',
+//?    2037 - 1991,
+//?    'teacher',
+//?   ['Michael', 'Peter', 'Steven']
+//? ];
+
+
+// Yukarıdaki örneklerde object (nesne) tanımlama örneği verilmektedir.
+
+//? console.log(jonas.lastName);
+
+// Yukarıdaki örnekte obje içerisinde ki elemana ulaşma örneği verilmiştir.
+
+//? const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
+
+//? if (jonas[interestedIn]) {
+//?    console.log(jonas[interestedIn]);
+//? } else {
+//?    console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
+//? }
+
+// Yukarıdaki örnekte kullanıcıdan alınan bilgi ile objeden verileri ele alarak koşullu ifade örneği mevcuttur.
+
+//? const jonas = {
+//?    firstName : 'Jonas',
+//?    lastName: 'Schmedtmann',
+//?    birthYear: 1991,
+//?    job: 'teacher',
+//?   friends: ['Michael', 'Peter', 'Steven'],
+//?   hasDriversLicense: true,
+//?
+//?    
+//?
+//?
+//?   calcAge: function () {
+//?    return 2037 - this.birthYear;
+//? }
+//?
+//?
+//? };
+
+//? console.log(jonas.calcAge())
+
+// Yukarıdaki örnekde obje içerisinde fonksiyon tanımladık ve this metodu sayesinde veriye ulaştık. This metotu fonksiyonu çalıştıran ana uzantıyı ele alarak çalışır.
+
+//? const mark = {
+//?    fullName: 'Mark Miller',
+//?    mass: 78,
+//?    height: 1.69,
+//?    calcBMI: function () {
+//?        this.bmi = this.mass / this.height ** 2;
+//?        return this.bmi;
+//?    }
+//? };
+
+//? const john = {
+//?    fullName: 'John Smith',
+//?    mass: 92,
+//?    height:1.95,
+//?    calcBMI: function () {
+//?        this.bmi = this.mass / this.height ** 2;
+//?        return this.bmi;
+//?    }
+//? };
+
+//? mark.calcBMI();
+//? john.calcBMI();
+
+//? console.log(mark.bmi, john.bmi);
+
+//? if (mark.bmi > john.bmi) {
+//?   console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}' BMI (${john.bmi})`)
+//? } else if (john.bmi > mark.bmi) {
+//?    console.log(`${john.fullName}'s BMI (${john.bmi} is higher than ${mark.fullName}'s BMI (${mark.bmi}))`)
+//? }
+
+// Yukarıda bir adet daha this metodu kullanarak verilmiş bir örnek bulunmakta.
+
+//! Döngüler (FOR DÖNGÜSÜ) Nedir Ve Nasıl Kullanılır ?       
+
+//? for (let rep = 1; rep <= 10; rep++) {
+//?    console.log(`Lifting weights repetition ${rep}`);
+//? }
+
+// Yukarıdaki örnekte rep adlı oluşturduğumuz değişken 1'dir ve 10 olana kadar rep'i bir arttır emri verdik. Böylece konsola belirttiğimiz cümleyi 10 kez ard arda yazacak.
+
+//? const jonas = [
+//?    'Jonas',
+//?     'Schmedtmann',
+//?     2037 - 1991,
+//?     'teacher',
+//?    ['Michael', 'Peter', 'Steven']
+//? ];
+
+//? for (let i = 0; i < jonas.length; i++) {
+//?    console.log(jonas[i])
+//? }
+
+// Yukarıdaki örnekte dizimizin eleman uzunluğunu ele alıp tek tek bunları ekrana for döngüsü ile yazdırdık.
+
+//? const years = [1991, 2007, 1969, 2020];
+//? const ages = []
+
+//? for (let i= 0; i < years.length; i++) {
+//?  ages.push(2037 - years[i]);
+//? }
+//? console.log(ages);
+
+// Yukarıdaki örnekte yaş hesaplaması yaptık ve hesaplanan değerleri ages adlı boş dizimize aktardık ve konsolda gösterdik.
