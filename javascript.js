@@ -559,3 +559,13 @@
 //? console.log(ages);
 
 // Yukarıdaki örnekte yaş hesaplaması yaptık ve hesaplanan değerleri ages adlı boş dizimize aktardık ve konsolda gösterdik.
+
+//? for (let exercise = 1; exercise < 4; exercise++) {
+//?    console.log(`------- Starting exercise ${exercise}`);
+
+//?    for (let rep = 1; rep < 6; rep++) {
+//?        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
+//?    }
+//? }
+
+// Yukarıda döngü içerisinde döngü örneği verilmiştir.
